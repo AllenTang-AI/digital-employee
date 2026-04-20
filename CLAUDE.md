@@ -1,4 +1,4 @@
-# AI Agent — 数字员工构建平台
+# Digital Employee — 数字员工构建平台
 
 ## 定位
 
