@@ -30,13 +30,13 @@ NN-EmployeeName/
 1. **前置条件**：安装 [Claude Code](https://github.com/anthropics/claude-code)
 2. **克隆仓库**：
    ```bash
-   git clone https://github.com/AllenTang-AI/ai-agent-digital-employee.git
+   git clone https://github.com/AllenTang-AI/digital-employee.git
    ```
 3. **进入目录使用对应员工**：
    ```bash
-   cd "Digital Employee"/01-OfficeAgent   # 办公助理
-   cd "Digital Employee"/02-CodeAgent     # 代码审查
-   cd "Digital Employee"/03-AokongAgent   # 产品管理
+   cd Digital-Employee/01-OfficeAgent   # 办公助理
+   cd Digital-Employee/02-CodeAgent     # 代码审查
+   cd Digital-Employee/03-AokongAgent   # 产品管理
    ```
 
 ## 新建数字员工
