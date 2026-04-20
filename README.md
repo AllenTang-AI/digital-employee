@@ -34,9 +34,9 @@ NN-EmployeeName/
    ```
 3. **进入目录使用对应员工**：
    ```bash
-   cd ai-agent-digital-employee/01-OfficeAgent   # 办公助理
-   cd ai-agent-digital-employee/02-CodeAgent     # 代码审查
-   cd ai-agent-digital-employee/03-AokongAgent   # 产品管理
+   cd "Digital Employee"/01-OfficeAgent   # 办公助理
+   cd "Digital Employee"/02-CodeAgent     # 代码审查
+   cd "Digital Employee"/03-AokongAgent   # 产品管理
    ```
 
 ## 新建数字员工
