@@ -1,0 +1,7 @@
+python-docx>=0.8.11
+openpyxl>=3.1.0
+pandas>=2.0.0
+python-pptx>=0.6.23
+Pillow>=9.1.0
+markdown>=3.4
+watchdog>=3.0.0

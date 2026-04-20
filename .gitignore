@@ -1,0 +1,17 @@
+# 工作空间 — 不上传
+**/workspace/
+
+# 系统文件
+.DS_Store
+
+# 环境变量和密钥
+.env
+*.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Claude 本地数据
+.claude/scheduled_tasks.json
