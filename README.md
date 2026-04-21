@@ -8,8 +8,9 @@
 |---|---|---|---|
 | **00-AgentBuilderAgent** | 构建顾问 | 创建/审查数字员工 | 平台管理 |
 | **01-OfficeAgent** | 办公助理 | 文档处理、邮件、工作汇报 | 个人办公 |
-| **02-CodeAgent** | 软件架构师 | 代码审查、统计、架构重构 | 开发团队 |
-| **03-AokongAgent** | 产品经理 | 产品架构、需求评审、进度跟踪、产品测试 | 无人机产品 |
+| **02-TeamLeadAgent** | 研发团队Leader | 技术管理、项目交付、团队建设、绩效辅导 | 开发团队 |
+| **03-LowAltitudeAgent** | 低空经济 | 产业分析、空域管理、基础设施、应用场景、商业化 | 低空经济 |
+| **04-ProductAgent** | B/G端产品经理 | 市场分析、产品设计、需求管理、数据增长 | B端/G端软件产品 |
 
 ## 员工结构
 
@@ -32,16 +33,17 @@ NN-EmployeeName/
    ```bash
    git clone https://github.com/AllenTang-AI/digital-employee.git
    ```
-3. **进入目录使用对应员工**：
+3. **cd 进入对应员工目录，启动 claude**：
    ```bash
-   cd Digital-Employee/01-OfficeAgent   # 办公助理
-   cd Digital-Employee/02-CodeAgent     # 代码审查
-   cd Digital-Employee/03-AokongAgent   # 产品管理
+   cd Digital-Employee/01-OfficeAgent && claude     # 办公助理
+   cd Digital-Employee/02-TeamLeadAgent && claude   # 研发团队Leader
+   cd Digital-Employee/03-LowAltitudeAgent && claude # 低空经济
+   cd Digital-Employee/04-ProductAgent && claude     # B/G端产品管理
    ```
 
 ## 新建数字员工
 
-1. 按顺序分配编号（NN-），如 `04-NewAgent`
+1. 按顺序分配编号（NN-），如 `05-NewAgent`
 2. 参考 `00-AgentBuilderAgent/skills/official-patterns/` 中的规范
 3. 定义 `.claude-plugin/plugin.json` 标识
 4. 至少包含 2 个子Agent + 1 个 skill

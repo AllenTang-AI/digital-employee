@@ -10,9 +10,10 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep, Task
 ## 执行流程
 
 1. 识别用户意图：格式转换、内容提取、文档质检
-2. 调用 **doc-analyzer** 子Agent进行内容理解和格式分析
-3. 需要格式生成时调用对应脚本（md2docx/md2pdf/docx2pdf）
-4. 输出到 `workspace/output/docs/`
+2. 确认任务在 workspace 下是否有对应目录，如无则创建
+3. 调用 **doc-analyzer** 子Agent进行内容理解和格式分析
+4. 需要格式生成时调用对应脚本（md2docx/md2pdf/docx2pdf）
+5. 输出到 `workspace/{任务名}/01-docs/`
 
 ## 支持的操作
 

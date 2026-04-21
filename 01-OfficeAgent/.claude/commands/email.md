@@ -11,9 +11,10 @@ allowed-tools: Read, Write, Edit, Task
 ## 执行流程
 
 1. 识别邮件类型：草稿、回复、润色、质检
-2. 加载 `skills/email-composition` 中的模式参考
-3. 调用 **email-reviewer** 子Agent生成/审查邮件
-4. 输出到 console 或 `workspace/output/emails/`
+2. 确认任务在 workspace 下是否有对应目录，如无则创建
+3. 加载 `skills/email-composition` 中的模式参考
+4. 调用 **email-reviewer** 子Agent生成/审查邮件
+5. 输出到 console 或 `workspace/{任务名}/02-emails/`
 
 ## 支持的操作
 

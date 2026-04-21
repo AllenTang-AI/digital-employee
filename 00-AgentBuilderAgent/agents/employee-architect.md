@@ -25,7 +25,7 @@ NN-EmployeeName/
   agents/                       ← 专职子Agent
   skills/                       ← 按需加载的知识
   scripts/                      ← 工具脚本
-  workspace/                    ← input/output
+  workspace/                    ← 按项目/任务组织（参考 workspace-factory-pattern）
 ```
 
 ## 文件生成规范
@@ -68,7 +68,22 @@ NN-EmployeeName/
 
 ### Hooks
 - `.claude/hooks/hooks.json` 配置 SessionStart 事件
-- `.claude/hooks/session_start.py` 检查 workspace/input/ 新文件
+- `.claude/hooks/session_start.py` 检查 workspace/ 下新任务/项目
+
+### 工作目录（Workspace Factory Pattern）
+
+按**项目/任务**组织，第一层是项目/任务名称，第二层是编号目录：
+
+```
+workspace/
+  {项目或任务名称}/
+    00-references/   ← 输入（参考材料、代码、文档）
+    01-{职责域1}/    ← 输出：职责域1
+    02-{职责域2}/    ← 输出：职责域2
+    ...
+```
+
+commands 中的输出路径使用 `workspace/{项目名}/{编号}-{职责域}/` 格式。详见 `references/build-guide/workspace-factory-pattern.md`。
 
 ## 输出格式
 

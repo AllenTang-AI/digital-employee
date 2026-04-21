@@ -44,8 +44,15 @@
 
 ```
 workspace/
-  input/           ← PRD、需求描述等输入
-  output/          ← 生成的数字员工文件输出
+  {数字员工名称}/
+    .claude-plugin/plugin.json    ← 插件清单
+    CLAUDE.md                     ← 岗位说明书
+    agents/                       ← 子Agent
+    skills/                       ← 领域知识
+    .claude/commands/             ← 交互入口
+    .claude/hooks/                ← 事件驱动
+    scripts/                      ← 工具脚本
+    workspace/                    ← 按项目/任务组织（参考 workspace-factory-pattern）
 ```
 
 ## 脚本位置

@@ -22,7 +22,7 @@ def main():
         try:
             with open(plugin_json) as f:
                 info = json.load(f)
-            print(f"\n 当前 Agent: {info.get('name', 'unknown')}")
+            print(f"\n🤖 当前 Agent: {info.get('name', 'unknown')}")
             print(f"📍 工作目录: {workspace_dir}/\n")
         except Exception:
             pass
@@ -37,7 +37,6 @@ def main():
 
     for f in workspace_dir.rglob("*"):
         if f.is_file() and not f.name.startswith("."):
-            # Skip .git directories
             if "/.git/" in str(f):
                 continue
             mtime = datetime.fromtimestamp(f.stat().st_mtime)

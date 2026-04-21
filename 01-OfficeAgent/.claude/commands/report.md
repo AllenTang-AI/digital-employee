@@ -11,9 +11,10 @@ allowed-tools: Read, Write, Edit, Bash, Task, TodoWrite
 ## 执行流程
 
 1. 识别报告类型：weekly/progress/quarterly/briefing/outline2ppt
-2. 引导用户提供输入（要点/数据/里程碑）
-3. 调用 **report-writer** 子Agent生成结构化报告
-4. 输出到 `workspace/output/reports/`
+2. 确认任务在 workspace 下是否有对应目录，如无则创建
+3. 引导用户提供输入（要点/数据/里程碑）
+4. 调用 **report-writer** 子Agent生成结构化报告
+5. 输出到 `workspace/{任务名}/03-reports/`
 5. 如需 PPT，调用 `python3.13 scripts/outline_to_ppt.py`
 
 ## 支持的报告类型

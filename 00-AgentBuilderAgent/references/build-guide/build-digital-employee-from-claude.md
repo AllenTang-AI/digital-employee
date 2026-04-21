@@ -154,12 +154,15 @@ description: 这份知识是什么（决定是否自动加载）
 
 ### 3. 工作目录
 
-官方插件没有统一的工作目录概念。你增加了 `workspace/input/` 和 `workspace/output/`，按任务分类：
+采用**工厂模式**：第一层按项目/任务组织，第二层是标准化的编号目录。详见 `workspace-factory-pattern.md`。
 
 ```
 workspace/
-  input/           ← 用户放入待处理文件
-  output/          ← Agent 产出文件
+  {项目或任务名称}/
+    00-references/   ← 输入（参考材料、代码、文档）
+    01-{职责域1}/    ← 输出：职责域1
+    02-{职责域2}/    ← 输出：职责域2
+    ...
 ```
 
 ### 4. Hooks 事件驱动
@@ -235,7 +238,7 @@ Phase 3: 输出统一报告
 ### 1. 定义身份
 
 ```bash
-mkdir -p NN-EmployeeName/{agents,skills,.claude/{commands,hooks},scripts,workspace/{input,output}}
+mkdir -p NN-EmployeeName/{agents,skills,.claude/{commands,hooks},scripts,workspace}
 ```
 
 ### 2. 填写 .claude-plugin/plugin.json
@@ -282,7 +285,7 @@ mkdir -p NN-EmployeeName/{agents,skills,.claude/{commands,hooks},scripts,workspa
 - [ ] 所有文件内容为中文（frontmatter 字段名除外）
 - [ ] `.claude/settings.json` 权限已配置
 - [ ] hooks 已配置（至少 SessionStart）
-- [ ] workspace/input/ 和 output/ 目录已创建
+- [ ] workspace/ 目录已创建（按项目/任务组织，参考 workspace-factory-pattern）
 
 ---
 
